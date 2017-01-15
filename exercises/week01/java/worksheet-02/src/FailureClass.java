@@ -18,8 +18,8 @@ public class FailureClass {
 
     private String param5;
 
-    public FailureClass() {
-        this.myList = new ArrayList();
+    public FailureClass(ArrayList myList) {
+        this.myList = myList;
     }
 
     public int returnInt() {
