@@ -1,23 +1,26 @@
 package decouplinghelloworldinterfaces
 
+trait MessageProvider {
+    def getMessage : String
+}
 
 trait MessageRenderer {
     def render
 
-    def setMessageProvider(provider : decouplinghelloworldinterfaces.HelloWorldMessageProvider)
+    def setMessageProvider(provider : decouplinghelloworldinterfaces.MessageProvider)
 
-    def getMessageProvider : decouplinghelloworldinterfaces.HelloWorldMessageProvider
+    def getMessageProvider : decouplinghelloworldinterfaces.MessageProvider
 }
 
 class StandardOutMessageRenderer extends MessageRenderer {
 
-    private var messageProvider : decouplinghelloworldinterfaces.HelloWorldMessageProvider = null
+    private var messageProvider : decouplinghelloworldinterfaces.MessageProvider = null
 
-    def setMessageProvider(provider : decouplinghelloworldinterfaces.HelloWorldMessageProvider) = {
+    def setMessageProvider(provider : decouplinghelloworldinterfaces.MessageProvider) = {
         messageProvider = provider
     }
 
-    def getMessageProvider : decouplinghelloworldinterfaces.HelloWorldMessageProvider = {
+    def getMessageProvider : decouplinghelloworldinterfaces.MessageProvider = {
         messageProvider
     }
 
@@ -30,7 +33,7 @@ class StandardOutMessageRenderer extends MessageRenderer {
     }
 }
 
-class HelloWorldMessageProvider {
+class HelloWorldMessageProvider extends MessageProvider {
 
     private val message : String = "Hello Dave!"
 
@@ -41,8 +44,8 @@ class HelloWorldMessageProvider {
 
 
 object DecouplingHelloWorldInterfaces extends App {
-    val mr : decouplinghelloworldinterfaces.StandardOutMessageRenderer = new decouplinghelloworldinterfaces.StandardOutMessageRenderer
-    val mp : decouplinghelloworldinterfaces.HelloWorldMessageProvider   = new decouplinghelloworldinterfaces.HelloWorldMessageProvider
+    val mr : decouplinghelloworldinterfaces.MessageRenderer = new decouplinghelloworldinterfaces.StandardOutMessageRenderer
+    val mp : decouplinghelloworldinterfaces.MessageProvider = new decouplinghelloworldinterfaces.HelloWorldMessageProvider
 
     mr.setMessageProvider(mp)
     mr.render
