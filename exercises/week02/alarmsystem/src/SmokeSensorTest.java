@@ -1,35 +1,44 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class SmokeSensorTest {
 
-  @Test
-  public void testThatIsTriggeredReturnsFalse() {
-    SmokeSensor sensor = new SmokeSensor();
-    boolean isTriggered = sensor.isTriggered();
-    assertEquals(false, isTriggered);
-  }
+    private Sensor smokeSensor;
 
-  @Test
-  public void testThatGetLocationReturnsNull() {
-    SmokeSensor sensor = new SmokeSensor();
-    String location = sensor.getLocation();
-    assertEquals(null, location);
-  }
+    @Before
+    public void setUp() {
+        smokeSensor = new SmokeSensor("kitchen");
+    }
 
-  @Test
-  public void testThatGetSensorTypeReturnsNull() {
-    SmokeSensor sensor = new SmokeSensor();
-    String sensorType = sensor.getSensorType();
-    assertEquals(null, sensorType);
-  }
+    @Test
+    public void testThatIsTriggeredReturnsFalse() {
+        boolean isTriggered = smokeSensor.isTriggered();
+        assertEquals(false, isTriggered);
+    }
 
-  @Test
-  public void testThatGetBatteryPercentageReturnsNegativeOne() {
-    SmokeSensor sensor = new SmokeSensor();
-    double batteryPercentage = sensor.getBatteryPercentage();
-    assertEquals(-1.0, batteryPercentage, 0.01);
-  }
+    @Test
+    public void testThatGetLocationReturnsKitchen() {
+        String location = smokeSensor.getLocation();
+        assertEquals("kitchen", location);
+
+    }
+
+    @Test
+    public void testThatGetSensorTypeReturnsSmoke() {
+        String sensorType = smokeSensor.getSensorType();
+        assertEquals("smoke sensor", sensorType);
+    }
+
+    @Test
+    public void testThatGetBatteryPercentageIsReducedBy20OnEachCall() {
+
+        assertEquals(100.00, smokeSensor.getBatteryPercentage(), 0.01);
+
+        smokeSensor.isTriggered();
+
+        assertEquals(80.00, smokeSensor.getBatteryPercentage(), 0.01);
+    }
 
 }
