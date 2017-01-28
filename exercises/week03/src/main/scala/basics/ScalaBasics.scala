@@ -16,7 +16,7 @@ object ScalaBasics {
       * @return the sum
       */
     def add(a: Int, b: Int): Int = {
-        a + b
+         a + b
     }
 
     /**
@@ -28,7 +28,9 @@ object ScalaBasics {
       * @param end the end of the range
       * @return the inclusive Range from start to end
       */
-    def inRange(start: Int, end: Int): Range = ???
+    def inRange(start: Int, end: Int): Range = {
+        start to end
+    }
 
     /**
       * Write a function that returns a Range of odd n odd integers starting at 1.
@@ -38,7 +40,9 @@ object ScalaBasics {
       * @param n the number of odd integers in the range
       * @return a Range of odd integers, excluding the last add integer
       */
-    def oddRange(n: Int): Range = ???
+    def oddRange(n: Int): Range = {
+        1 to n by 2
+    }
 
     /**
       * Write a function that returns the minimum integer in the Array r.
@@ -52,7 +56,28 @@ object ScalaBasics {
       * @param r the array of integers
       * @return the minimum integer in the array
       */
-    def minWhile(r: Array[Int]): Int = ???
+    def minWhile(r: Array[Int]): Int = {
+
+        if (r.length == 0) {
+            throw new IllegalArgumentException("Array must contain at least one value.")
+        }
+
+        var minimum : Int = r(0)
+        var length  : Int = r.length - 1
+
+        while (length > 0) {
+
+            val value = r(length)
+
+            if (value < minimum) {
+                minimum = value
+            }
+
+            length = length - 1
+        }
+
+        minimum
+    }
 
     /**
       * Write a function that returns the minimum integer in the Array r.
@@ -66,7 +91,16 @@ object ScalaBasics {
       * @param r the array of integers
       * @return the minimum integer in the array
       */
-    def minFor(r: Array[Int]): Int = ???
+    def minFor(r: Array[Int]): Int = {
+
+        var minimum : Int = r(0)
+
+        for (i <- r) {
+            minimum = r.min
+        }
+
+        minimum
+    }
 
     /**
       * Write a function called minRecursive that returns the minimum integer in the Array r.
@@ -154,7 +188,7 @@ object ScalaBasics {
       * @param cc 0 or more characters
       * @return the sum of the ASCII integers corresponding with the character.
       */
-    //def sumChars(cc: Char*): Int = ???
+    def sumChars(cc: Char*): Int = ???
 
     /**
       * Counts the number of space delimited words in the provided array of strings.
