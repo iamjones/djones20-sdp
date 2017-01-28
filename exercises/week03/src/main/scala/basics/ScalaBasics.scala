@@ -109,6 +109,7 @@ object ScalaBasics {
       *
       * - You may not use any loops.
       * - You may not use any mutable (var) or immutable (val) variables.
+      * - According to the test it needs an if condition as well
       *
       * HINT: You might want to look at the Scaladoc for Array to see some
       * useful methods you can use to solve this.
@@ -116,7 +117,18 @@ object ScalaBasics {
       * @param r the array of integers
       * @return the minimum integer in the array
       */
-    def minRecursive(r: Array[Int]): Int = ???
+    def minRecursive(r: Array[Int]): Int = {
+
+        if (r.length == 1) {
+            return r(0)
+        }
+
+        if (r(0) > r(1)) {
+            minRecursive(r.filterNot(elm => elm == r(0)))
+        } else {
+            minRecursive(r.filterNot(elm => elm == r(1)))
+        }
+    }
 
     /**
       * Return the base 36 equivalent of the BitInt b.
@@ -126,7 +138,9 @@ object ScalaBasics {
       * @param b a big integer
       * @return the base 36 equivalent
       */
-    def base36(b: BigInt): String = ???
+    def base36(b: BigInt): String = {
+        b.toString(36)
+    }
 
     /**
       * Splits the String s in half.
@@ -136,7 +150,7 @@ object ScalaBasics {
       *
       * For example,
       *   splitInHalf("abcdef") => ("abc", "def")
-      *   splitInFalf("abcde")  => ("ab", "cde")
+      *   splitInHalf("abcde")  => ("ab", "cde")
       *
       * Your implementation must conform to the following rules:
       *
@@ -149,7 +163,9 @@ object ScalaBasics {
       * @param s the string to split
       * @return the split string as a tuple
       */
-    def splitInHalf(s: String): (String, String) = ???
+    def splitInHalf(s: String): (String, String) = {
+        s.splitAt(s.length / 2)
+    }
 
     /**
       * Determines if the given string s is a palindrome.
