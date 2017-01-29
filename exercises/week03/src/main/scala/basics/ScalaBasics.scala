@@ -188,23 +188,18 @@ object ScalaBasics {
       * @param s the potential palindrome
       * @return true if s is a palindrome; false otherwise
       */
-    def isPalindrome(s: String): Boolean = ???
+    def isPalindrome(s: String): Boolean = {
 
-    /**
-      * You don't have to complete this one as we've removed it from the list
-      * of required functions.
-      *
-      * Sum the characters (as integers) provided as arguments to this method.
-      *
-      * Your implementation must conform to the following rules:
-      *
-      * - You must use a for loop
-      * - You may use any mutable (var) variables.
-      *
-      * @param cc 0 or more characters
-      * @return the sum of the ASCII integers corresponding with the character.
-      */
-    def sumChars(cc: Char*): Int = ???
+        val end : Int = s.length - 1
+
+        for (i <- 0 until end) yield {
+            if (s(i) != s(end)) {
+                false
+            }
+        }
+
+        true
+    }
 
     /**
       * Counts the number of space delimited words in the provided array of strings.
@@ -231,6 +226,28 @@ object ScalaBasics {
       * @param lines the lines of a text file
       * @return a map from words to the number of times that word was seen
       */
-    def wordCounter(lines: Array[String]): Map[String, Int] = ???
+    def wordCounter(lines: Array[String]): Map[String, Int] = {
 
+        var returnMap : Map[String, Int] = Map()
+
+        for (line <- lines) {
+
+            val strings : Array[String] = line.split(' ')
+
+            for (s <- strings) {
+
+                println(returnMap)
+                println(s)
+
+                if (returnMap.contains(s)) {
+                    val inc : Int = returnMap(s) + 1
+                    returnMap = returnMap + (s -> inc)
+                } else {
+                    returnMap = returnMap + (s -> 1)
+                }
+            }
+        }
+
+        returnMap
+    }
 }
