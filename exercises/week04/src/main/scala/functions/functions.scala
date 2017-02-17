@@ -12,15 +12,11 @@ object Funcs {
       * @param ls : List[A] the list to process
       * @return A list containing all but the first element of ls
       */
-    def tail[A](ls: List[A]): List[A] = {
-
-        def listTail(ls: List[A]) {
-            case nil => new IllegalAccessException("A non empty list is needed.")
-            case _   => ls.tail
+    def tail[A](ls: List[A]): List[A] =
+        ls match {
+            case Nil =>  throw new IllegalAccessException
+            case hd :: tl => tl
         }
-
-        listTail(ls)
-    }
 
     /**
       * setHead replaces the first value in a list with a given value. If the
