@@ -1,24 +1,12 @@
 [0m[[0minfo[0m] [0m[32mFunctionsTestSuite:[0m[0m
 [0m[[0minfo[0m] [0m[32m- Tail removes the first element[0m[0m
-[0m[[0minfo[0m] [0m[31m- setHead changes the first element of the list *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.setHead(functions.scala:30)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$2(FunctionsTestSuite.scala:13)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1075/454229593.apply(Unknown Source)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- setHead changes the first element of the list[0m[0m
 [0m[[0minfo[0m] [0m[31m- drop removes N elements from the front of the list *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.drop(functions.scala:40)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.drop(functions.scala:44)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$3(FunctionsTestSuite.scala:17)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1076/2073790446.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1090/89535373.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -29,9 +17,9 @@
 [0m[[0minfo[0m] [0m[31m- init removes the last element *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.init(functions.scala:50)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.init(functions.scala:54)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$4(FunctionsTestSuite.scala:21)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1077/1270998071.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1091/1640604861.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -42,9 +30,9 @@
 [0m[[0minfo[0m] [0m[31m- foldLeft computes the correct value *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.foldLeft(functions.scala:65)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.foldLeft(functions.scala:69)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$5(FunctionsTestSuite.scala:26)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1078/1135903156.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1092/47524456.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -55,9 +43,9 @@
 [0m[[0minfo[0m] [0m[31m- sum produces the correct sum *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.sum(functions.scala:79)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.sum(functions.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$7(FunctionsTestSuite.scala:30)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1079/1339576237.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1093/1009223135.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -68,9 +56,9 @@
 [0m[[0minfo[0m] [0m[31m- product produces the correct product *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.product(functions.scala:81)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.product(functions.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$8(FunctionsTestSuite.scala:34)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1080/1750799695.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1094/140051341.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -81,9 +69,9 @@
 [0m[[0minfo[0m] [0m[31m- length calculates the length *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.length(functions.scala:83)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.length(functions.scala:87)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$9(FunctionsTestSuite.scala:38)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1081/746562607.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1095/614048375.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -94,9 +82,9 @@
 [0m[[0minfo[0m] [0m[31m- reverse reverses the list *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.reverse(functions.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.reverse(functions.scala:89)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$10(FunctionsTestSuite.scala:42)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1082/1268853045.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1096/263473894.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -107,9 +95,9 @@
 [0m[[0minfo[0m] [0m[31m- flatten flattens the nested list *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.flatten(functions.scala:87)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.flatten(functions.scala:91)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$11(FunctionsTestSuite.scala:46)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1083/1183429323.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1097/255668146.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -120,9 +108,9 @@
 [0m[[0minfo[0m] [0m[31m- map creates a new list of the correct values *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.map(functions.scala:100)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.map(functions.scala:104)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$12(FunctionsTestSuite.scala:51)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1084/1992828472.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1098/1337458867.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -133,9 +121,9 @@
 [0m[[0minfo[0m] [0m[31m- filter filters the list *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.filter(functions.scala:111)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.filter(functions.scala:115)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$14(FunctionsTestSuite.scala:55)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1085/667400722.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1099/651921705.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -146,9 +134,9 @@
 [0m[[0minfo[0m] [0m[31m- flatMap maps and flattens *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.flatMap(functions.scala:122)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.flatMap(functions.scala:126)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$16(FunctionsTestSuite.scala:59)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1086/1710081886.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1100/185930862.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -159,9 +147,9 @@
 [0m[[0minfo[0m] [0m[31m- maxAverage calculates the max average *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.maxAverage(functions.scala:136)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.maxAverage(functions.scala:140)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$18(FunctionsTestSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1087/1861828290.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1101/1840507393.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
@@ -172,9 +160,9 @@
 [0m[[0minfo[0m] [0m[31m- variance calculates the correct variance *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.variance(functions.scala:150)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.Funcs$.variance(functions.scala:154)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite.$anonfun$new$20(FunctionsTestSuite.scala:71)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1088/1505176771.apply(Unknown Source)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at functions.FunctionsTestSuite$$Lambda$1102/1644286620.apply(Unknown Source)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
