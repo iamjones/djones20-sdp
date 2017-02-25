@@ -41,7 +41,11 @@ object Funcs {
       * @param n  : Int the number of elements to drop.
       * @return a list with the first n elements of ls removed, or an empty list.
       */
-    def drop[A](ls: List[A], n: Int): List[A] = ???
+    def drop[A](ls: List[A], n: Int): List[A] =
+        n match {
+            case 0 => ls
+            case _ => drop(tail(ls), n - 1)
+        }
 
     /**
       * init takes a list and removes the last element.
@@ -51,7 +55,12 @@ object Funcs {
       * @param ls : List[A] the list to be changed.
       * @return a list with the last element of ls removed.
       */
-    def init[A](ls: List[A]): List[A] = ???
+    def init[A](ls: List[A]): List[A] =
+        ls match {
+            case Nil => throw new IllegalArgumentException
+            case hd :: Nil => Nil
+            case hd :: tl => hd :: init(tl)
+        }
 
     // LIST FOLDING
 
