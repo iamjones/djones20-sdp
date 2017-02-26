@@ -2,7 +2,11 @@ package sml;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.AnnotatedType;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -74,50 +78,59 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-        int s1; // Possible operands of the instruction
-        int s2;
-        int r;
-        int x;
 
         if (line.equals(""))
             return null;
 
         String ins = scan();
-        switch (ins) {
-            case "add":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
-            case "lin":
-                r = scanInt();
-                s1 = scanInt();
-                return new LinInstruction(label, r, s1);
-            case "sub":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new SubInstruction(label, r, s1, s2);
-            case "div":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new DivInstruction(label, r, s1, s2);
-            case "mul":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new MulInstruction(label, r, s1, s2);
-            case "out":
-                r = scanInt();
-                return new OutInstruction(label, r);
-            case "bnz":
-                r = scanInt();
-                String register = scan();
-                return new BnzInstruction(label, r, register);
-        }
+        String insCapitalised  = ins.substring(0, 1).toUpperCase() + ins.substring(1).toLowerCase();
+        String className  = "sml." + insCapitalised + "Instruction";
 
-        // You will have to write code here for the other instructions.
+        try {
+
+            Constructor<?>[] constructors = Class.forName(className).getConstructors();
+            Constructor constructor = null;
+            int constructorParamCount = 0;
+
+            // Find the constructor with the maximum number of params
+            for (Constructor c : constructors) {
+                if (c.getParameterCount() > constructorParamCount) {
+                    constructor = c;
+                    constructorParamCount = c.getParameterCount();
+                }
+            }
+
+            // Map the require list of parameters to values in an array
+            List<Object> arguments = new ArrayList<>();
+            // We will always have a label
+            arguments.add(label);
+
+            AnnotatedType[] params = constructor.getAnnotatedParameterTypes();
+
+            for (AnnotatedType p : params) {
+
+                // Ignore the first argument as its always label
+                if (p == params[0]) {
+                    continue;
+                }
+
+                if (p.getType() == int.class) {
+                    arguments.add(scanInt());
+                }
+
+                if (p.getType() == String.class) {
+                    arguments.add(scan());
+                }
+            }
+
+            return (Instruction) constructor.newInstance(arguments.toArray());
+
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException |
+                InvocationTargetException | IllegalArgumentException | NullPointerException e) {
+            System.out.println("A " + e.getClass() + " was thrown.");
+            System.out.println("The instruction '" + ins + "' does not exist.");
+            System.out.println(e.getMessage());
+        }
 
         return null;
     }
