@@ -94,6 +94,12 @@ public class Translator {
 
             // Find the constructor with the maximum number of params
             for (Constructor c : constructors) {
+
+                // If we have more than one constructor ignore the default one
+                if (constructors.length > 1 && c == constructors[0]) {
+                    continue;
+                }
+
                 if (c.getParameterCount() > constructorParamCount) {
                     constructor = c;
                     constructorParamCount = c.getParameterCount();
