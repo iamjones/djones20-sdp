@@ -70,10 +70,16 @@ public class Machine {
     public void execute() {
         setPc(0);
         setRegisters(new Registers());
-        while (getPc() < getProg().size()) {
-            Instruction ins = getProg().get(getPc());
-            setPc(getPc() + 1);
-            ins.execute(this);
+
+        try {
+            while (getPc() < getProg().size()) {
+                Instruction ins = getProg().get(getPc());
+                setPc(getPc() + 1);
+                ins.execute(this);
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("IllegalArgumentException: " + e.getMessage());
+            System.exit(-1);
         }
     }
 

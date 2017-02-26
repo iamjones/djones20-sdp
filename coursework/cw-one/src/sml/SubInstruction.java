@@ -2,7 +2,7 @@ package sml;
 
 /**
  * Subtracts the value in one register with a value in another register.
- * The computed value is stored in another register.
+ * The computed value is stored in the appointed register.
  */
 public class SubInstruction extends Instruction {
 
