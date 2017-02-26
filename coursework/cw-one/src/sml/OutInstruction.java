@@ -17,7 +17,7 @@ public class OutInstruction extends Instruction {
     }
 
     @Override
-    public void execute(Machine m) throws IllegalArgumentException {
+    public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(this.register);
 
         System.out.println("Register " + this.register + " = " + value1);

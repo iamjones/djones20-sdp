@@ -22,7 +22,7 @@ public class MulInstruction extends Instruction {
     }
 
     @Override
-    public void execute(Machine m) throws IllegalArgumentException {
+    public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(op1);
         int value2 = m.getRegisters().getRegister(op2);
 
