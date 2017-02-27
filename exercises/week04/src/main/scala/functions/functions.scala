@@ -136,7 +136,7 @@ object Funcs {
       */
     def map[A, B](ls: List[A])(f: A => B): List[B] =
         ls match {
-            case Nil => ls
+            case hd :: Nil => f(hd) :: Nil
             case hd :: tl => f(hd) :: map(tl) (f)
         }
 
@@ -149,7 +149,13 @@ object Funcs {
       * @param f  : A => Boolean the predicate
       * @return the filtered list.
       */
-    def filter[A](ls: List[A])(f: A => Boolean): List[A] = ???
+    def filter[A](ls: List[A])(f: A => Boolean): List[A] = {
+        ls match {
+            case Nil => ls
+            case hd :: tl if f(hd) => hd :: filter(tl) (f)
+            case hd :: tl if !f(hd) => filter(tl) (f)
+        }
+    }
 
     /**
       * flatMap is very similar to map. However, the function returns a List,
@@ -160,7 +166,11 @@ object Funcs {
       * @return a List[B] containing the flattened results of applying f to all
       *         elements of ls.
       */
-    def flatMap[A, B](ls: List[A])(f: A => List[B]): List[B] = ???
+    def flatMap[A, B](ls: List[A])(f: A => List[B]): List[B] =
+        ls match {
+            case hd :: Nil => f(hd)
+            case hd :: tl => f(hd) ::: flatMap(tl) (f)
+        }
 
     // COMBINING FUNCTIONS
 
