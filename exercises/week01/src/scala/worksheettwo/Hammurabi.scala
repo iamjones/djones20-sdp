@@ -1,4 +1,7 @@
+import com.sun.org.apache.bcel.internal.generic.POP
+
 import scala.io.StdIn
+import scala.util.Random
 
 object Hammurabi {
 
@@ -17,7 +20,7 @@ object Hammurabi {
 
         printIntroductoryMessage()
 
-        (1 to 10) foreach { _ =>
+        (1 to 10) foreach { year =>
 
             // How many acres of land to buy
             var acresToBuy = askHowMuchLandToBuy(bushelsInStorage, pricePerAcre)
@@ -37,19 +40,31 @@ object Hammurabi {
             acresOwned = acresOwned - acresToPlant
 
             // If there is a plague
+            if (isThereAPlague) {
+                population = population / 2
+            }
 
             // How many people starved
+            val peopleWhoGetToEat = grainToFeedThePeople / 20
+            if (removedFromPowerDueToStarvation(peopleWhoGetToEat, population)) {
+                println("Over 45% of the population has starved. You were killed in a mutiny.")
+                return
+            }
 
             // How many people came to the city
+            population = population + peopleEnterTheCity(acresOwned, bushelsInStorage, population)
 
             // How good the harvest is
+            bushelsInStorage = bushelsInStorage + producedInHarvest(acresToPlant)
 
             // If you have a problem with rats
+            bushelsInStorage = bushelsInStorage - grainEatenByRats(bushelsInStorage)
 
             // How much land will cost next year
+            pricePerAcre = costOfLand
 
             println("O great Hammurabi!\n"
-            + s"You are in year $_ of your ten year rule.\n"
+            + s"You are in year $year of your ten year rule.\n"
             + s"In the previous year $starved people starved to death.\n"
             + s"In the previous year $immigrants people entered the kingdom.\n"
             + s"The population is now $population.\n"
@@ -59,6 +74,18 @@ object Hammurabi {
             + s"Land is currently worth $pricePerAcre bushels per acre.\n"
             + s"There were $plagueDeaths deaths from the plague.\n")
         }
+
+        println("Congratulations you lasted 10 years!")
+        println("Your final stats are:")
+
+        println(s"In the previous year $starved people starved to death.\n"
+            + s"In the previous year $immigrants people entered the kingdom.\n"
+            + s"The population is now $population.\n"
+            + s"We harvested $harvest bushels at $bushelsPerAcre bushels per acre.\n"
+            + s"Rats destroyed $rats_ate bushels, leaving $bushelsInStorage bushels in storage.\n"
+            + s"The city owns $acresOwned acres of land.\n"
+            + s"Land is currently worth $pricePerAcre bushels per acre.\n"
+            + s"There were $plagueDeaths deaths from the plague.\n")
     }
 
     def printIntroductoryMessage() {
@@ -123,6 +150,33 @@ object Hammurabi {
             acresToPlant = readInt("How many acres to plant with seed?")
         }
         acresToPlant
+    }
+
+    def isThereAPlague : Boolean = {
+        Random.nextInt(100) < 15
+    }
+
+    def peopleEnterTheCity(acres : Int, grainInStorage : Int, population : Int) : Int = {
+        (20 * acres + grainInStorage) / (100 * population) + 1
+    }
+
+    def removedFromPowerDueToStarvation(peopleWhoGetToEat : Int, population : Int) : Boolean = {
+        peopleWhoGetToEat == 0 || (population / peopleWhoGetToEat) * 100 < 45
+    }
+
+    def producedInHarvest(acresPlanted : Int) : Int = {
+        acresPlanted * Random.nextInt(8)+1
+    }
+
+    def grainEatenByRats(totalGrain : Int) : Int = {
+        if (Random.nextInt(100) < 40) {
+            (totalGrain / 100) * Random.nextInt(3)+1
+        }
+        0
+    }
+
+    def costOfLand : Int = {
+        17 + Random.nextInt(5)
     }
 }
 
