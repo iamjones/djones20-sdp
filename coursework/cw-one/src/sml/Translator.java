@@ -131,10 +131,11 @@ public class Translator {
 
             return (Instruction) constructor.newInstance(arguments.toArray());
 
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException |
+        } catch (ClassNotFoundException e) {
+            System.out.println("The instruction '" + ins + "' does not exist.");
+        } catch (IllegalAccessException | InstantiationException |
                 InvocationTargetException | IllegalArgumentException | NullPointerException e) {
             System.out.println("A " + e.getClass() + " was thrown.");
-            System.out.println("The instruction '" + ins + "' does not exist.");
             System.out.println(e.getMessage());
         }
 

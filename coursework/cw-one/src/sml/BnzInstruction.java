@@ -23,7 +23,7 @@ public class BnzInstruction extends Instruction {
     public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(this.register);
 
-        if (value1 > 0) {
+        if (value1 != 0) {
             int count = m.getLabels().indexOf(this.op1);
             m.setPc(count);
         }
