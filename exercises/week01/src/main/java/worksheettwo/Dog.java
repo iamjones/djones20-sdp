@@ -1,3 +1,4 @@
+package main.java.worksheettwo;
 
 public final class Dog implements Animal {
 

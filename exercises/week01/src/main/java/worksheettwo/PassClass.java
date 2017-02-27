@@ -1,3 +1,5 @@
+package main.java.worksheettwo;
+
 /**
  * Class to be used in the ClassTester test.
  * Every test should pass when testing this class.

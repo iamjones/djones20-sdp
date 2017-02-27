@@ -1,3 +1,4 @@
+package main.java.worksheettwo;
 
 public interface Animal {
 

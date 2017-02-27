@@ -1,3 +1,5 @@
+package main.java.worksheettwo;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -109,6 +111,6 @@ public class ObjectReader {
             System.out.println("Class with the name '" + className + "' was not found.");
         }
 
-        System.out.println("The script will not exit.");
+        System.out.println("The script will now exit.");
     }
 }
