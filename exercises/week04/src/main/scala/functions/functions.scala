@@ -75,7 +75,11 @@ object Funcs {
      * list and the cumulative value.
      * @return the final valued.
      */
-    def foldLeft[A, B](ls: List[A], z: B)(f: (B, A) => B): B = ???
+    def foldLeft[A, B](ls: List[A], z: B)(f: (B, A) => B): B =
+        ls match {
+            case Nil => z
+            case hd :: tl => foldLeft(tl, f(z, hd)) (f)
+        }
 
     /**
       * Use your implementation of foldLeft to implement these functions:
@@ -89,15 +93,35 @@ object Funcs {
       * the sublists into one long list. For example, flatten(List(List(1,2,3),
       * List(4,5,6))) produces List(1,2,3,4,5,6).
       */
-    def sum(ls: List[Double]): Double = ???
+    def sum(ls: List[Double]): Double =
+        ls match {
+            case Nil => 0.0
+            case _ => foldLeft(ls, 0.0) (_ + _)
+        }
 
-    def product(ls: List[Double]): Double = ???
+    def product(ls: List[Double]): Double =
+        ls match {
+            case Nil => 0.0
+            case hd :: tl => foldLeft(tl, hd) (_ * _)
+        }
 
-    def length[A](ls: List[A]): Int = ???
+    def length[A](ls: List[A]): Int =
+        ls match {
+            case Nil => 0
+            case _ => foldLeft(ls, 0) ((x, y) => x + 1)
+        }
 
-    def reverse[A](ls: List[A]): List[A] = ???
+    def reverse[A](ls: List[A]): List[A] =
+        ls match {
+            case Nil => throw new IllegalArgumentException("List can't be nil.")
+            case _ => foldLeft(ls, List[A]()) ((x, y) => y :: x)
+        }
 
-    def flatten[A](ls: List[List[A]]): List[A] = ???
+    def flatten[A](ls: List[List[A]]): List[A] =
+        ls match {
+            case Nil => throw new IllegalArgumentException("List can't be nil.")
+            case _ => foldLeft(ls, List[A]()) ((x, y) => x ::: y)
+        }
 
     // MAP AND FILTER
 
@@ -110,7 +134,11 @@ object Funcs {
       * @param f  : A => B the function to be applied to each element of the input.
       * @return the resulting list from applying f to each element of ls.
       */
-    def map[A, B](ls: List[A])(f: A => B): List[B] = ???
+    def map[A, B](ls: List[A])(f: A => B): List[B] =
+        ls match {
+            case Nil => ls
+            case hd :: tl => f(hd) :: map(tl) (f)
+        }
 
     /**
       * filter removes all elements from a list for which a given predicate
