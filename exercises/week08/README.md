@@ -18,3 +18,11 @@ injected as dependencies. This could lead to constructor bloat, especially if th
 has other things to do other than organise the objects components. The composition objects
 could be assigned to the object at runtime using a setter if there needs to be some
 flexibility.
+
+7. 
+* The facade pattern basically abstracts many method calls into one method.
+*. You would use the facade pattern when you want to hide some implementation that a 
+piece of code does not need to know about. For example if a method makes a call to another
+method called withdrawMoney, it doesnt need to know that the withdraw money method actually
+makes calls to the methods validateAccount, checkFundAvailable and withdraw. This helps to
+keep code clean.
