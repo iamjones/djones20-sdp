@@ -7,9 +7,14 @@ or method at run time. The advantage of this is you will not be adding code to s
 * It is appropriate to use the strategy pattern when you need a class that can change its behaviour
  at run time.
   
-3.
-* It is appropriate to use the abstract factory pattern when you want the flexibility of 
+3. It is appropriate to use the abstract factory pattern when you want the flexibility of 
 changing or adding many objects during runtime. For example you might have a many implementations
 of a car and a car could have different types of wheels, engine and body work. Using the abstract
 factory design pattern means you could have many classes that build different types of cars
 and each car can have a different configuration so a factory is need to build each individual car.
+
+5. They could be part of the controller, whether instantiated inside the controller or
+injected as dependencies. This could lead to constructor bloat, especially if the construct
+has other things to do other than organise the objects components. The composition objects
+could be assigned to the object at runtime using a setter if there needs to be some
+flexibility.
