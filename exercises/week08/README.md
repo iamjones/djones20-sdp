@@ -26,3 +26,8 @@ piece of code does not need to know about. For example if a method makes a call 
 method called withdrawMoney, it doesnt need to know that the withdraw money method actually
 makes calls to the methods validateAccount, checkFundAvailable and withdraw. This helps to
 keep code clean.
+
+9.
+You should use the bridge design pattern when you want to progressively add functionality
+while still separating it by abstraction. When you use the bridge pattern you should be 
+able to change each abstract class independently. 
