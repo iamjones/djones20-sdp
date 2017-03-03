@@ -1,0 +1,74 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala, /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 6 sources: invalidated sources (6) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 6 Scala sources to /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/target/scala-2.12/test-classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.12.1[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.12.1[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 3dc4ff22, interfacing (CompilerInterface) with Scala compiler version 2.12.1[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/classes:/Users/davidjones/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/target/scala-2.12/test-classes:/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/target/scala-2.12/classes:/Users/davidjones/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.12.1.jar:/Users/davidjones/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.1.jar:/Users/davidjones/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar:/Users/davidjones/.ivy2/cache/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.22.jar:/Users/davidjones/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.22.jar:/Users/davidjones/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.1.jar:/Users/davidjones/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar:/Users/davidjones/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.4.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 9.030797898 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineSuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vendor/PublicVendorParserSuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeFactorySuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/bc/PublicByteCodeParserSuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/support/TreeTraversals.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, getMethod, traverseGuard, atOwner, wait, $asInstanceOf, hasLoops, equals, traverseTypeAscription, traverseCases, traversePattern, asInstanceOf, traverseConstant, getTerms, synchronized, calls, $isInstanceOf, traverseAnnotations, traverseImportSelector, hasVarDef, hasForEach, notifyAll, getVals, traverseParams, getVars, isInstanceOf, hasForComp, traverseStats, <init>, apply, raw, getVal, ==, traverseTreess, traverse, clone, ValTraverser, ifs, getMethods, traverseTrees, hasIfs, TreeTraversals, hasValDef, traverseModifiers, traverseParamss, toString, hasWhileLoop, !=, IfExprTraverser, doesNotHaveIfs, currentOwner, getClass, MethodCallTraverser, getIfs, traverseTypeArgs, valdefs, traverseName, traverseSelfType, defdefs, ne, asTree, traverseParents, eq, ##, finalize, hashCode, MethodTraverser.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /Users/davidjones/Dropbox/github/sdp/coursework/cw-two/src/test/scala/vm/PublicVirtualMachineParserSuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
