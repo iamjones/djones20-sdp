@@ -31,3 +31,12 @@ keep code clean.
 You should use the bridge design pattern when you want to progressively add functionality
 while still separating it by abstraction. When you use the bridge pattern you should be 
 able to change each abstract class independently. 
+
+11.
+* The composite design pattern is where you can have a group of objects that can be treated
+the same way as an individual object. These objects are usually structured in a tree like
+format. The objects can represent whole of parts of a hierarchy.
+* You would use the composite design pattern when you have data that needs to be stored in a
+hierarchy. For example a family tree.
+* The four components of the composite design pattern are: composite objects, leaf objects, 
+the component interface and an application to manipulate the structure.
