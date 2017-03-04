@@ -1,10 +1,23 @@
 package composite
 
-// TODO
 case class HtmlParentElement(s: String) extends HtmlTag(s) {
-  override def setStartTag(tag: String): Unit = ???
 
-  override def setEndTag(tag: String): Unit = ???
+    var startTag : String = _
+    var endTag : String = _
 
-  override def generateHtml: Unit = ???
+    override def setStartTag(tag: String) {
+        startTag = tag
+    }
+
+    override def setEndTag(tag: String) {
+        endTag = tag
+    }
+
+    override def generateHtml {
+        println(startTag)
+
+        children.forEach(x => x.generateHtml)
+
+        println(endTag)
+    }
 }
