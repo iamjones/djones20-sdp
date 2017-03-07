@@ -1,14 +1,19 @@
-/**
-  * Created by davidjones on 09/02/2017.
-  */
-case class Counter(count: Int) {
+class Counter(c: Int) {
 
-    def inc(): Counter = {
-        Counter(count + 1)
+    def count : Int = c
+
+    def inc(c : Int = 0): Counter = {
+        c match {
+            case 0 => new Counter(count + 1)
+            case _ => new Counter(count + c)
+        }
     }
 
-    def dec(): Counter = {
-        Counter(count - 1)
+    def dec(c : Int = 0): Counter = {
+        c match {
+            case 0 => new Counter(count - 1)
+            case _ => new Counter(count - c)
+        }
     }
 }
 
@@ -18,7 +23,7 @@ object CounterRun {
 
         val start = 10
 
-        val c: Counter = Counter(start)
+        val c: Counter = new Counter(start)
 
         println(c.inc().dec().inc().inc().count)
     }
