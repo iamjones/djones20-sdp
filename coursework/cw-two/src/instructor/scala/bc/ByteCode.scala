@@ -58,39 +58,6 @@ trait ByteCode extends ByteCodeValues {
     def execute(vm: VirtualMachine): VirtualMachine
 }
 
-// 1
-class Iconst extends ByteCode {
-
-    override val code: Byte = bytecode("iconst")
-
-    override def execute(vm: VirtualMachine): VirtualMachine = {
-
-        vm.push(code)
-    }
-}
-
-// 2
-class Iadd extends ByteCode {
-
-    override val code: Byte = bytecode("iadd")
-
-    override def execute(vm: VirtualMachine): VirtualMachine = {
-
-        vm.push(code)
-    }
-}
-
-// 3
-class Isub extends ByteCode {
-
-    override val code: Byte = bytecode("isub")
-
-    override def execute(vm: VirtualMachine): VirtualMachine = {
-
-        vm.push(code)
-    }
-}
-
 // 4
 class Imul extends ByteCode {
 

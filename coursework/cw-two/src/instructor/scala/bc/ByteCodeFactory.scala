@@ -24,12 +24,17 @@ trait ByteCodeFactory {
     def make(byte: Byte, args: Int*): ByteCode
 }
 
-class ByteCodeFactoryImpl extends ByteCodeFactory with ByteCodeValues {
+class ByteCodeFactoryImpl extends ByteCodeFactory {
 
     def make(byte: Byte, args: Int*): ByteCode = {
 
        byte match {
-           case 1 => new Iconst
+           case 1 => {
+               args.length match {
+                   case 0 => throw new IllegalArgumentException("A integer value to push to the stack is required")
+                   case 1 => Iconst(args.head)
+               }
+           }
            case 2 => new Iadd
            case 3 => new Isub
            case 4 => new Imul
