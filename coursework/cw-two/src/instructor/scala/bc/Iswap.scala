@@ -8,7 +8,7 @@ import vm.VirtualMachine
   * and pushes them back in the opposite order.
   * Remember to use the virtual machine instance returned from the pop calls.
   */
-class Iswap extends ByteCode {
+case object Iswap extends ByteCode {
 
     override val code: Byte = bytecode("iswap")
 

@@ -25,7 +25,7 @@ class PublicByteCodeFactorySuite extends FunSuite with ByteCodeValues {
     }
 
     test("Creating a iconst byte code without a value should throw an exception") {
-        intercept[IllegalArgumentException] {
+        intercept[InvalidBytecodeException] {
             bcf.make(bytecode("iconst"))
         }
     }

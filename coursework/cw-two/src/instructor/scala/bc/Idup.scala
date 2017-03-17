@@ -8,7 +8,7 @@ import vm.VirtualMachine
   * pushes the value twice.
   * Remember to use the virtual machine instance returned from the pop calls.
   */
-class Idup extends ByteCode {
+case object Idup extends ByteCode {
 
     override val code: Byte = bytecode("idup")
 

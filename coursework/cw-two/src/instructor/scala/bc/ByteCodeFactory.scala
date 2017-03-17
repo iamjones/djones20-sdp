@@ -28,25 +28,29 @@ class ByteCodeFactoryImpl extends ByteCodeFactory {
 
     def make(byte: Byte, args: Int*): ByteCode = {
 
-       byte match {
-           case 1 => {
-               args.length match {
-                   case 0 => throw new IllegalArgumentException("A integer value to push to the stack is required")
-                   case 1 => Iconst(args.head)
-               }
-           }
-           case 2 => new Iadd
-           case 3 => new Isub
-           case 4 => new Imul
-           case 5 => new Idiv
-           case 6 => new Irem
-           case 7 => new Ineg
-           case 8 => new Iinc
-           case 9 => new Idec
-           case 10 => new Idup
-           case 11 => new Iswap
-           case 12 => new Print
-           case _ => throw new InvalidBytecodeException("Invalid byte code")
-       }
+        /**
+          * Iconst requires an Int to be pushed to the stack. If one is not
+          * supplied then an InvalidBytecodeException is thrown.
+          */
+        byte match {
+            case 1 => {
+                args match {
+                    case Nil => throw new InvalidBytecodeException("Iconst byte code needs a value to be pushed to the stack")
+                    case _ => Iconst(args.head)
+                }
+            }
+            case 2 => Iadd
+            case 3 => Isub
+            case 4 => Imul
+            case 5 => Idiv
+            case 6 => Irem
+            case 7 => Ineg
+            case 8 => Iinc
+            case 9 => Idec
+            case 10 => Idup
+            case 11 => Iswap
+            case 12 => Print
+            case _ => throw new InvalidBytecodeException("Invalid byte code")
+        }
     }
 }

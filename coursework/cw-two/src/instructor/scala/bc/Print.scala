@@ -8,7 +8,7 @@ import vm.VirtualMachine
   * and prints the value to the console.
   * Remember to use the virtual machine instance returned from the pop calls.
   */
-class Print extends ByteCode {
+case object Print extends ByteCode {
 
     override val code: Byte = bytecode("print")
 

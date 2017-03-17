@@ -8,7 +8,7 @@ import vm.VirtualMachine
   * pushes the result.
   * Remember to use the virtual machine instance returned from the pop calls.
   */
-class Ineg extends ByteCode {
+case object Ineg extends ByteCode {
 
     override val code: Byte = bytecode("ineg")
 
