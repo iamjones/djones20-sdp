@@ -99,15 +99,14 @@ public class Translator {
             // Find the constructor with the maximum number of params
             for (Constructor c : constructors) {
 
-                // If we have more than one constructor ignore the default one
-                if (constructors.length > 1 && c == constructors[0]) {
-                    continue;
-                }
-
                 if (c.getParameterCount() > constructorParamCount) {
                     constructor = c;
                     constructorParamCount = c.getParameterCount();
                 }
+            }
+
+            if (constructor == null) {
+                throw new NoSuchMethodException("The class '" + className + "' needs to have a constructor.");
             }
 
             // Map the required list of parameters to values in an array
@@ -140,7 +139,7 @@ public class Translator {
         } catch (ClassNotFoundException e) {
             System.out.println("The instruction '" + ins + "' does not exist.");
         } catch (IllegalAccessException | InstantiationException |
-                InvocationTargetException | IllegalArgumentException | NullPointerException e) {
+                InvocationTargetException | IllegalArgumentException | NullPointerException | NoSuchMethodException e) {
             System.out.println("A " + e.getClass() + " was thrown.");
             System.out.println(e.getMessage());
         }
