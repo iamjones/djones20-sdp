@@ -74,9 +74,13 @@ public class Translator {
         return true;
     }
 
-    // line should consist of an MML instruction, with its label already
-    // removed. Translate line into an instruction with label label
-    // and return the instruction
+    /**
+     * Line should consist of an MML instruction, with its label already removed.
+     * Translate line into an instruction with label label and return the instruction.
+     *
+     * @param label String
+     * @return Instruction
+     */
     public Instruction getInstruction(String label) {
 
         if (line.equals(""))
@@ -106,7 +110,7 @@ public class Translator {
                 }
             }
 
-            // Map the require list of parameters to values in an array
+            // Map the required list of parameters to values in an array
             List<Object> arguments = new ArrayList<>();
             // We will always have a label
             arguments.add(label);
@@ -120,10 +124,12 @@ public class Translator {
                     continue;
                 }
 
+                // If the parameter type is an int then we call scanInt and add the returned value to the list
                 if (p.getType() == int.class) {
                     arguments.add(scanInt());
                 }
 
+                // If the parameter type is a String then we call scan and add the returned value to the list
                 if (p.getType() == String.class) {
                     arguments.add(scan());
                 }
@@ -142,9 +148,11 @@ public class Translator {
         return null;
     }
 
-    /*
+    /**
      * Return the first word of line and remove it from line. If there is no
      * word, return ""
+     *
+     * @return String
      */
     private String scan() {
         line = line.trim();
@@ -160,8 +168,11 @@ public class Translator {
         return word;
     }
 
-    // Return the first word of line as an integer. If there is
-    // any error, return the maximum int
+    /**
+     * Return the first word of line as an integer. If there is any error, return the maximum int.
+     *
+     * @return int
+     */
     private int scanInt() {
         String word = scan();
         if (word.length() == 0) {
