@@ -7,14 +7,30 @@ package bc
   * convenient access to its definitions.
   */
 trait ByteCodeParser extends ByteCodeValues {
-  /**
-    * Parses a vector of `Byte` into a vector of `ByteCode`.
-    *
-    * You should use [[ByteCodeValues.bytecode]] to help translate
-    * the individual `Byte`s into a correponding [[ByteCode]].
-    *
-    * @param bc a vector of bytes representing bytecodes
-    * @return a vector of `ByteCode` objects
-    */
-  def parse(bc: Vector[Byte]): Vector[ByteCode]
+    /**
+      * Parses a vector of `Byte` into a vector of `ByteCode`.
+      *
+      * You should use [[ByteCodeValues.bytecode]] to help translate
+      * the individual `Byte`s into a correponding [[ByteCode]].
+      *
+      * @param bc a vector of bytes representing bytecodes
+      * @return a vector of `ByteCode` objects
+      */
+    def parse(bc: Vector[Byte]): Vector[ByteCode]
+}
+
+class ByteCodeParserImpl extends ByteCodeParser {
+
+    val byteCodeFactory : ByteCodeFactory = new ByteCodeFactoryImpl
+
+    override def parse(bc: Vector[Byte]): Vector[ByteCode] = {
+
+        var codes = Vector[ByteCode]()
+
+        bc.foreach(b => {
+            codes = codes :+ byteCodeFactory.make(b)
+        })
+
+        codes
+    }
 }

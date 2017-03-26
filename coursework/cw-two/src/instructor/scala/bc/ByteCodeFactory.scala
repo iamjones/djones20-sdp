@@ -24,7 +24,7 @@ trait ByteCodeFactory {
     def make(byte: Byte, args: Int*): ByteCode
 }
 
-class ByteCodeFactoryImpl extends ByteCodeFactory {
+class ByteCodeFactoryImpl extends ByteCodeFactory with ByteCodeValues {
 
     def make(byte: Byte, args: Int*): ByteCode = {
 
@@ -33,12 +33,11 @@ class ByteCodeFactoryImpl extends ByteCodeFactory {
           * supplied then an InvalidBytecodeException is thrown.
           */
         byte match {
-            case 1 => {
+            case 1 =>
                 args match {
                     case Nil => throw new InvalidBytecodeException("Iconst byte code needs a value to be pushed to the stack")
                     case _ => Iconst(args.head)
                 }
-            }
             case 2 => Iadd
             case 3 => Isub
             case 4 => Imul
