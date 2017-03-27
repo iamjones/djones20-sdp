@@ -26,10 +26,20 @@ class ByteCodeParserImpl extends ByteCodeParser {
     override def parse(bc: Vector[Byte]): Vector[ByteCode] = {
 
         var codes = Vector[ByteCode]()
+        val l : Int = bc.length
+        var c : Int = 0
 
-        bc.foreach(b => {
-            codes = codes :+ byteCodeFactory.make(b)
-        })
+        while (c < l) {
+
+            if (bc(c) == bytecode("iconst")) {
+                codes = codes :+ byteCodeFactory.make(bc(c), bc(c + 1))
+                c += 1
+            } else {
+                codes = codes :+ byteCodeFactory.make(bc(c))
+            }
+
+            c += 1
+        }
 
         codes
     }
