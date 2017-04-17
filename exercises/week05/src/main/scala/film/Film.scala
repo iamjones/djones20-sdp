@@ -1,10 +1,10 @@
 package film
 
-class Film(
-  val name : String,
-  val yearOfRelease : Int,
-  val imdbRating : Double,
-  val director: Director
+case class Film(
+  name : String,
+  yearOfRelease : Int,
+  imdbRating : Double,
+  director: Director
 ) {
 
     // Question 3.a
@@ -24,11 +24,6 @@ class Film(
 }
 
 object Film {
-
-    // Question 3.b
-    def apply(name : String, yearOfRelease : Int, imdbRating : Double, director: Director) : Film = {
-        Film(name, yearOfRelease, imdbRating, director)
-    }
 
     // Question 3.b
     def highestRating(f1 : Film, f2 : Film) : Film = {
