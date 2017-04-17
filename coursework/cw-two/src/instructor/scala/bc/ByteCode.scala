@@ -16,17 +16,17 @@ class InvalidBytecodeException(msg: String) extends Exception(msg)
   * definitions below useful.
   */
 trait ByteCodeValues {
-  /**
-    * A vector of the allowable bytecode names.
-    * Not particularly flexible but that isn't the point of this assessment.
-    */
-  val names = Vector("iconst", "iadd", "isub", "imul", "idiv", "irem",
-    "ineg", "iinc", "idec", "idup", "iswap", "print")
+    /**
+      * A vector of the allowable bytecode names.
+      * Not particularly flexible but that isn't the point of this assessment.
+      */
+    val names = Vector("iconst", "iadd", "isub", "imul", "idiv", "irem",
+        "ineg", "iinc", "idec", "idup", "iswap", "print")
 
-  /**
-    * A map from bytecode names to a unique byte that represents them.
-    */
-  val bytecode = names.zip(1.to(names.length).map(_.toByte)).toMap
+    /**
+      * A map from bytecode names to a unique byte that represents them.
+      */
+    val bytecode = names.zip(1.to(names.length).map(_.toByte)).toMap
 }
 
 /**
@@ -42,18 +42,18 @@ trait ByteCodeValues {
   * that trait.
   */
 trait ByteCode extends ByteCodeValues {
-  /**
-    * A unique byte value representing the bytecode. An implementation
-    * will set this to the bytecode corresponding to the name of the
-    * bytecode in [[ByteCodeValues]]
-    */
-  val code: Byte
+    /**
+      * A unique byte value representing the bytecode. An implementation
+      * will set this to the bytecode corresponding to the name of the
+      * bytecode in [[ByteCodeValues]]
+      */
+    val code: Byte
 
-  /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
-    *
-    * @param vm the initial virtual machine
-    * @return a new virtual machine
-    */
-  def execute(vm: VirtualMachine): VirtualMachine
+    /**
+      * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+      *
+      * @param vm the initial virtual machine
+      * @return a new virtual machine
+      */
+    def execute(vm: VirtualMachine): VirtualMachine
 }
