@@ -1,33 +1,34 @@
+package java.alarmsystem;
+
 import java.util.Random;
 
-public class FireSensor implements Sensor {
+public class SmokeSensor implements Sensor {
 
     private double batteryPercentage = 100.00;
     private String location;
 
-    public FireSensor(String sensorLocation) {
+    public SmokeSensor(String sensorLocation) {
         location = sensorLocation;
     }
 
     /**
-     * Return true 5% of the time.
-     * Drain 10% of the battery life when drained.
+     * 10% of the times it raises an alarm.
+     * 20% of battery is reduced on each call.
      *
      * @return boolean
      */
     @Override
     public boolean isTriggered() {
 
-        // If the battery is zero the sensor mus tbe off
         if (batteryPercentage == 0.00) {
             return false;
         }
 
-        batteryPercentage = batteryPercentage - 10.00;
+        batteryPercentage = batteryPercentage - 20.00;
 
         Random randomNum = new Random();
 
-        if (randomNum.nextInt(100) < 5) {
+        if (randomNum.nextInt(100) < 10) {
             return true;
         }
 
@@ -41,7 +42,7 @@ public class FireSensor implements Sensor {
 
     @Override
     public String getSensorType() {
-        return "fire sensor";
+        return "smoke sensor";
     }
 
     @Override

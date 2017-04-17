@@ -1,4 +1,4 @@
-package decoupledhelloworld
+package scala.decoupledhelloworld
 
 class StandardOutMessageRenderer {
 

@@ -1,4 +1,4 @@
-package decouplinghelloworldinterfaces
+package scala.decouplinghelloworldinterfaces
 
 trait MessageProvider {
     def getMessage : String

@@ -1,3 +1,5 @@
+package java.alarmsystem;
+
 public interface Sensor {
   boolean isTriggered();
 

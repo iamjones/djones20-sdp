@@ -1,4 +1,4 @@
-package decouplingwithfactory
+package scala.decouplingwithfactory
 
 import java.io.FileInputStream
 import java.util.Properties
@@ -18,7 +18,7 @@ trait MessageRenderer {
 object MessageSupportFactory {
     private val instance: decouplingwithfactory.MessageSupportFactory = new decouplingwithfactory.MessageSupportFactory
 
-    def getInstance() : decouplingwithfactory.MessageSupportFactory = {
+    def getInstance() : scala.decouplingwithfactory.MessageSupportFactory = {
         instance
     }
 }
@@ -33,7 +33,7 @@ class MessageSupportFactory private() {
 
     try {
 
-        var propertyPath: String = "di-scala/src/decouplingwithfactory/bean.properties"
+        var propertyPath: String = "di-scala/src/scala.decouplingwithfactory/bean.properties"
 
         props.load(new FileInputStream(propertyPath))
 

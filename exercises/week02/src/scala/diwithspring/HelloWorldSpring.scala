@@ -1,4 +1,4 @@
-package diwithspring
+package scala.diwithspring
 
 import java.io.FileInputStream
 import java.util.Properties
@@ -33,7 +33,7 @@ object HelloWorldSpring extends App {
         val factory: DefaultListableBeanFactory = new DefaultListableBeanFactory
         val definitionReader: PropertiesBeanDefinitionReader = new PropertiesBeanDefinitionReader(factory)
 
-        val propertyPath: String = "/Users/davidjones/Dropbox/github/sdp/exercises/week02/di-scala/src/diwithspring/bean.properties"
+        val propertyPath: String = "/Users/davidjones/Dropbox/github/sdp/exercises/week02/di-scala/src/scala.diwithspring/bean.properties"
         val props: Properties = new Properties
 
         props.load(new FileInputStream(propertyPath))

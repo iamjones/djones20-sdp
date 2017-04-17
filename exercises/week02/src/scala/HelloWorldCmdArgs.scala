@@ -1,3 +1,5 @@
+package scala
+
 object HelloWorldCmdArgs {
     def main(args: Array[String]) = {
         Runner.main(Array());
