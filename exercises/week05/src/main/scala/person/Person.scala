@@ -1,9 +1,6 @@
 package person
 
-class Person(f: String, s: String) {
-
-    def firstname : String = f
-    def surname : String   = s
+case class Person(f: String, s: String) {
 
 }
 
@@ -24,12 +21,12 @@ object PersonTester {
 
         // Question 2.a
         val p = new Person("David", "Jones")
-        println(p.firstname)
-        println(p.surname)
+        println(p.f)
+        println(p.s)
 
         val person = Person("Dave Jones")
-        println(person.firstname)
-        println(person.surname)
+        println(person.f)
+        println(person.s)
     }
 }
 
